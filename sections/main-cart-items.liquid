@@ -45,9 +45,10 @@
           <p> {{ producto.title }} Cantidad: {{ producto.quantity }} y cada uno cuesta {{ producto.price | money  }}</p>
        </div>
       {%- endfor -%}
-     {%- if cart -%}
+     {%- if cart.original_total_price > 400 -%} 
+      <p>Tienes envio gratism animal</p>
 
-        {%- endif -%}
+      {%- endif -%}
       
     </div>
 
