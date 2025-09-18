@@ -37,10 +37,11 @@
     <div>
       El carrito hoy tiene
 
-      {{ cart.item_count  }}
+      {{ cart.item_count  }} productos
 
       {%- for producto in cart.items -%}
-        {{ producto.title }}
+       <p> {{ producto.title }} </p>
+       <p> {{ producto.quantity }} </p>
       {%- endfor -%}
     </div>
 
