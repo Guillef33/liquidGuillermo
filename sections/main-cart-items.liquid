@@ -40,8 +40,10 @@
       {{ cart.item_count  }} productos
 
       {%- for producto in cart.items -%}
-       <p> {{ producto.title }} </p>
-       <p> {{ producto.quantity }} </p>
+        <div>
+          <p> {{ producto.title }} </p>
+          <p> {{ producto.quantity }} </p>
+       </div>
       {%- endfor -%}
     </div>
 
