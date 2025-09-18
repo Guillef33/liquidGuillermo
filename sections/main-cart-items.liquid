@@ -35,7 +35,11 @@
     </div>
 
     <div>
-      El carrito hoy tiene {{ cart.items.first }}
+      El carrito hoy tiene
+
+      {%- for producto in cart.items -%}
+        {{ producto }}
+      {%- endfor -%}
     </div>
 
     <div class="cart__warnings">
