@@ -41,7 +41,7 @@
 
       {%- for producto in cart.items -%}
         <div>
-          <p>{{ cart | json }}</p>
+          {% comment %} <p>{{ cart | json }}</p> {% endcomment %}
           <p> {{ producto.title }} Cantidad: {{ producto.quantity }} y cada uno cuesta {{ producto.price | money  }}</p>
        </div>
       {%- endfor -%}
