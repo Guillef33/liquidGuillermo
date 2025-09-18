@@ -322,7 +322,11 @@
           {%- endif -%}
         </div>
       </div>
-      <p>Puedo acceder al product {{ card_product.selected_or_first_available_variant.id }} </p>
+      {% comment %} <p>Puedo acceder al product {{ card_product.selected_or_first_available_variant.id }} </p> {% endcomment %}
+      
+      {% form 'cart', cart %}
+      {%- endform -%}
+      
       <form method="post" action="{{  routes.cart_add_url }}">
         <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}">
         <input type="hidden" name="quantity" value="1">
