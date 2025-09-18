@@ -36,7 +36,6 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
-    <p>Testeo</p>
     <div
       class="
         card card--{{ settings.card_style }}
@@ -323,6 +322,11 @@
           {%- endif -%}
         </div>
       </div>
+      <form method="post" action="/card/add">
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" class="button"> Add to card </button>
+      </form>
     </div>
   </div>
 {%- else -%}
