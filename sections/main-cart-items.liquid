@@ -38,7 +38,7 @@
       El carrito hoy tiene
 
       {%- for producto in cart.items -%}
-        {{ producto }}
+        {{ producto.final_price }}
       {%- endfor -%}
     </div>
 
