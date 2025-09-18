@@ -325,17 +325,17 @@
       {% comment %} <p>Puedo acceder al product {{ card_product.selected_or_first_available_variant.id }} </p> {% endcomment %}
       
       {% form 'product', card_product %}
- <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}">
+        <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}">
         <input type="hidden" name="quantity" value="1">
         <button type="submit" class="button"> Add to card </button>
 
       {%- endform -%}
       
-      <form method="post" action="{{  routes.cart_add_url }}">
+      {% comment %} <form method="post" action="{{  routes.cart_add_url }}">
         <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}">
         <input type="hidden" name="quantity" value="1">
         <button type="submit" class="button"> Add to card </button>
-      </form>
+      </form> {% endcomment %}
     </div>
   </div>
 {%- else -%}
