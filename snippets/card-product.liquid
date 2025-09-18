@@ -322,7 +322,7 @@
           {%- endif -%}
         </div>
       </div>
-      <form method="post" action="/cart/add">
+      <form method="post" action="{{  routes.cart_add_url }}">
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
         <input type="hidden" name="quantity" value="1">
         <button type="submit" class="button"> Add to card </button>
