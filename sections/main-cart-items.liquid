@@ -41,8 +41,7 @@
 
       {%- for producto in cart.items -%}
         <div>
-          <p> {{ producto.title }} </p>
-          <p> {{ producto.quantity }} </p>
+          <p> {{ producto.title }} Cantidad: {{ producto.quantity }} </p>
        </div>
       {%- endfor -%}
     </div>
